@@ -4,7 +4,7 @@
 
 class Square:
     """
-    Class that defines properties of square by: (based on 3-square.py).
+    Class that defines properties of square .
 
     Attributes:
         size: size of a square (1 side).
@@ -32,14 +32,14 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Property setter for size.
+        """setter for size.
 
         Args:
-            value (int): size of a square (1 side).
+            value (int): len of a square.
 
         Raises:
-            TypeError: size must be an integer
-            ValueError: size must be >= 0
+            TypeError: must be an integer
+            ValueError:  must be >= 0
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
