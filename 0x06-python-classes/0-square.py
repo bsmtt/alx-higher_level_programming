@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-'''
-    square class
-'''
+"""Square Class"""
+
+
 class Square:
-    """ define attributes """
+    """
+        Class properties.
+    """
     pass
