@@ -7,12 +7,10 @@
 class BaseGeometry:
     '''A BaseGeometry class.'''
 
-    @classmethod
     def area(self):
         '''compute this area.'''
         raise Exception('area() is not implemented')
 
-    @classmethod
     def integer_validator(self, name, value):
         '''validating the value.'''
         if type(value) != int:
