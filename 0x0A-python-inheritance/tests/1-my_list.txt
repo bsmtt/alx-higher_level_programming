@@ -22,3 +22,20 @@ wiht NULL value:
    >>> my_list.append(NULL)
    Traceback (most recent call last):
    NameError: name 'NULL' is not defined
+
+Original list unchanged:
+    >>> ml = MyList([2, 10, 1, -10, 20, 100, 0])
+    >>> ml.print_sorted()
+    [-10, 0, 1, 2, 10, 20, 100]
+    >>> ml
+    [2, 10, 1, -10, 20, 100, 0]
+
+Negative ints list test:
+    >>> ml = MyList([-1000, -98, -232565, 0, -23423434, -123])
+    >>> ml.print_sorted()
+    [-23423434, -232565, -1000, -123, -98, 0]
+
+Empty list test:
+    >>> ml = MyList()
+    >>> ml.print_sorted()
+    []
