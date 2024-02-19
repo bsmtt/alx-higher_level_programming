@@ -1,12 +1,24 @@
-:: with positives integers
+The ``1-my_list`` module
+============================
+
+Using ``1-mylist``
+---------------------
+
+
+class type is correct:
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
 >>> isinstance(my_list, list)
 True
 
-:: append to the list
+append to the list:
    >>> my_list.append(5)
    >>> my_list.append(7)
    >>> my_list.append(2)
    >>> my_list.print_sorted()
    [2, 5, 7]
+
+wiht NULL value:
+   >>> my_list.append(NULL)
+   Traceback (most recent call last):
+   NameError: name 'NULL' is not defined
