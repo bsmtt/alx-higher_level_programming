@@ -17,10 +17,10 @@ class Student:
         """ obj to json """
         if attrs is None:
             return self.__dict__
-        else:
-            newdir = {}
-            for key, value in self.__dict__.items():
-                if key in attrs:
-                    new_dir[key] = value
 
-            return new_dir
+        newdir = {}
+        for key, value in self.__dict__.items():
+            if key in attrs:
+                new_dir[key] = value
+
+        return new_dir
