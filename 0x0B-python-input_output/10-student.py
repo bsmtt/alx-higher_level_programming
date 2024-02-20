@@ -18,7 +18,7 @@ class Student:
         if attrs is None:
             return self.__dict__
 
-        newdir = {}
+        new_dir = {}
         for key, value in self.__dict__.items():
             if key in attrs:
                 new_dir[key] = value
