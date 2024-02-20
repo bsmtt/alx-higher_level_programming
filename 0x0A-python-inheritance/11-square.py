@@ -8,7 +8,7 @@ module with class BaseGeometry
 class Square(Rectangle):
     """Square class that inherits from Rectangle that inherits BaseGeometry"""
 
-    def __init__(self, size)
+    def __init__(self, size):
         '''Constructor.'''
         self.integer_validator("size", size)
         self.__size = size
