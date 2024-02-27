@@ -1,4 +1,7 @@
-ass Base:
+#!/usr/bin/python3
+
+
+class Base:
     ''' the base of all classes in the project '''
 
     __nb_objects = 0
