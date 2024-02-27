@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+''' the base of all classes in the project '''
 
 
 class Base:
