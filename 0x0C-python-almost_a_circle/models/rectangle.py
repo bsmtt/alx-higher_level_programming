@@ -68,8 +68,8 @@ class Rectangle(Base):
     def area(self):
         ''' area of this rectangle. '''
         return self.width * self.height
-    
-    def display(self): 
+
+    def display(self):
         r = '\n' * self.y
         r += (' ' * self.x + '#' * self.width + '\n') * self.height
         print(r, end='')
@@ -86,6 +86,7 @@ class Rectangle(Base):
             self.x = x
         if y:
             self.y = y
+
     def update(self, *args, **kwargs):
         '''Updates instance attributes via no-keyword & keyword args.'''
         if args:
@@ -105,4 +106,11 @@ class Rectangle(Base):
 
     def __str__(self):
         '''Returns string info about this rectangle.'''
-        return '[{}] ({}) {}/{} - {}/{}'.format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+        return '[{}] ({}) {}/{} - {}/{}'.format(
+                    type(self).__name__,
+                    self.id,
+                    self.x,
+                    self.y,
+                    self.width,
+                    self.height
+                )
