@@ -15,3 +15,18 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        '''Json dictionary so it's quite rightly and longer.'''
+        if list_dictionaries is None or not list_dictionaries:
+            return "[]"
+        else:
+            return dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''Unjsonifies a dictionary.'''
+        if json_string is None or not json_string:
+            return []
+        return loads(json_string)
