@@ -30,7 +30,7 @@ class Base:
         if json_string is None or not json_string:
             return []
         return loads(json_string)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         '''Saves jsonified object to file.'''
@@ -57,7 +57,7 @@ class Base:
         with open(file, "r", encoding="utf-8") as f:
             return [cls.create(**d) for d in cls.from_json_string(f.read())]
 
-   @classmethod
+    @classmethod
     def create(cls, **dictionary):
         '''Loads instance from dictionary.'''
         from models.rectangle import Rectangle
