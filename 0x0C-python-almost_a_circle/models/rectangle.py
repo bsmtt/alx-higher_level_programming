@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 '''Module for Rectangle class.'''
 
 
@@ -32,6 +31,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, val):
+        '''Width of rectangle.'''
         self.validate_int("width", val)
         self.__width = val
 
@@ -42,6 +42,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, val):
+        '''height of rectangle.'''
         self.validate_int("height", val)
         self.__height = val
 
@@ -52,6 +53,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, val):
+        '''y of rectangle.'''
         self.validate_int("y", val, True)
         self.__y = val
 
@@ -62,14 +64,16 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, val):
+        '''x of rectangle.'''
         self.validate_int("x", val, True)
         self.__x = val
 
     def area(self):
         ''' area of this rectangle. '''
         return self.width * self.height
-    
-    def display(self): 
+
+    def display(self):
+        '''display of rectangle.'''
         r = '\n' * self.y
         r += (' ' * self.x + '#' * self.width + '\n') * self.height
         print(r, end='')
@@ -86,6 +90,7 @@ class Rectangle(Base):
             self.x = x
         if y:
             self.y = y
+
     def update(self, *args, **kwargs):
         '''Updates instance attributes via no-keyword & keyword args.'''
         if args:
@@ -105,4 +110,11 @@ class Rectangle(Base):
 
     def __str__(self):
         '''Returns string info about this rectangle.'''
-        return '[{}] ({}) {}/{} - {}/{}'.format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+        return '[{}] ({}) {}/{} - {}/{}'.format(
+                    type(self).__name__,
+                    self.id,
+                    self.x,
+                    self.y,
+                    self.width,
+                    self.height
+                )
